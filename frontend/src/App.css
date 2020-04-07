@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+ul, li{
+  text-decoration: none;
+  list-style: none;
+}
+
+ul{
+  display: block;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+li{
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+form{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input{
+  width: calc(100% - 50px);
+  box-sizing: border-box;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.add-button{
+  width: 45px;
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
