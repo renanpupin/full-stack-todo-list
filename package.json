@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "backend": "npm start --prefix packages/backend",
+    "frontend": "npm start --prefix packages/frontend",
+    "ios": "npm run ios --prefix packages/mobile",
+    "android": "npm run android --prefix packages/mobile"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}

@@ -1,7 +1,28 @@
 # full-stack-todo-list
 Full stack TODO list showing best practices with concepts of backend, frontend e mobile development
 
-## Setup
+## Setup and run (monorepo)
+    ```
+    lerna bootstrap
+    ```
+
+- Backend
+    ```
+    yarn backend
+    ```
+
+- Frontend
+    ```
+    yarn frontend
+    ```
+  
+- Mobile
+    ```
+    yarn ios
+    yarn android
+    ```
+
+## Setup and run (individually)
 - Backend
     ```
     cd backend
