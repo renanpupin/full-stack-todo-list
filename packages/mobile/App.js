@@ -185,6 +185,7 @@ class App extends Component {
                     style={{
                         dispaly: 'flex',
                         flexDirection: 'row',
+                        borderColor: "#e1e1e1",
                         borderWidth: index === this.state.todos.length - 1 ? 0 : 1
                     }}
                 >
@@ -208,27 +209,31 @@ class App extends Component {
 
         return (
             <View style={styles.container}>
-                <Text>TODOs</Text>
-
-                {this.state.loading && <Text>Loading...</Text>}
-
-                <View testID="list-todos">
-                    {rows}
+                <View style={{flex: 1}}>
+                    <Text style={{fontWeight: "bold"}}>TODOs</Text>
                 </View>
 
-                {!this.state.loading && rows.length === 0 && <Text>No TODOs found.</Text>}
+                <View style={{flex: 1}}>
+                    {this.state.loading && <Text>Loading...</Text>}
 
-                <View onSubmit={this.createTodo}>
-                    <TextInput
-                        type={"text"}
-                        placeholder={"Write your new TODO"}
-                        value={this.state.text}
-                        onChange={(event) => {
-                            this.setState({text: event.target.value})
-                        }}
-                    />
+                    <View testID="list-todos">
+                        {rows}
+                    </View>
 
-                    <Button type={"submit"} className={"add-button"} title={"Add"}/>
+                    {!this.state.loading && rows.length === 0 && <Text>No TODOs found.</Text>}
+
+                    <View style={{flex: 1}}>
+                        <TextInput
+                            type={"text"}
+                            placeholder={"Write your new TODO"}
+                            value={this.state.text}
+                            onChange={(text) => {
+                                this.setState({text: text})
+                            }}
+                        />
+
+                        <Button type={"submit"} className={"add-button"} title={"Add"} onPress={this.createTodo}/>
+                    </View>
                 </View>
             </View>
         );
@@ -241,6 +246,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        padding: 40,
+        marginTop: 40
     },
 });
 

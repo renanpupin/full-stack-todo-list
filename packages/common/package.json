@@ -2,6 +2,7 @@
   "name": "common",
   "version": "1.0.0",
   "description": "Common features of mobile and web applications, improving code reuse.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
