@@ -2,10 +2,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0",
-  "command": {
-    "bootstrap": {
-      "hoist": "react-native"
-    }
-  }
+  "version": "0.0.0"
 }

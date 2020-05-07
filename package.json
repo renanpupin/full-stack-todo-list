@@ -1,13 +1,30 @@
 {
   "name": "root",
   "private": true,
-  "scripts": {
-    "backend": "npm start --prefix packages/backend",
-    "frontend": "npm start --prefix packages/frontend",
-    "ios": "npm run ios --prefix packages/mobile",
-    "android": "npm run android --prefix packages/mobile"
-  },
   "devDependencies": {
     "lerna": "^3.20.2"
+  },
+  "dependencies": {
+    "metro-config": "^0.56.0"
+  },
+  "scripts": {
+    "backend": "npm start --prefix packages/backend",
+    "web": "lerna --scope=frontend run start --stream --",
+    "mobile:start": "lerna --scope=mobile run start --stream --",
+    "mobile:ios": "lerna --scope=mobile run ios --stream --",
+    "mobile:android": "lerna --scope=mobile run android --stream --",
+    "mobile:web": "lerna --scope=mobile run web --stream --",
+    "postinstall": "cd ./packages/mobile && expo-yarn-workspaces postinstall"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**"
+    ]
   }
 }
