@@ -9,7 +9,7 @@
   },
   "scripts": {
     "backend": "npm start --prefix packages/backend",
-    "web": "lerna --scope=frontend run start --stream --",
+    "web": "lerna --scope=frontend run start",
     "mobile:start": "lerna --scope=mobile run start --stream --",
     "mobile:ios": "lerna --scope=mobile run ios --stream --",
     "mobile:android": "lerna --scope=mobile run android --stream --",
