@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "customize-cra": "^0.9.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
